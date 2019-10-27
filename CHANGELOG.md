@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/informatievlaanderen/tostring-builder/compare/v1.1.0...v1.1.1) (2019-10-27)
+
+
+### Bug Fixes
+
+* move to fake 5 and new build tools ([3cd07ea](https://github.com/informatievlaanderen/tostring-builder/commit/3cd07ea))
+* upgrade build tools to get pack to work ([cc85b58](https://github.com/informatievlaanderen/tostring-builder/commit/cc85b58))
+
 # [1.1.0](https://github.com/informatievlaanderen/tostring-builder/compare/v1.0.3...v1.1.0) (2019-08-21)
 
 
