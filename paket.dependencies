@@ -32,6 +32,7 @@ nuget SourceLink.Copy.PdbFiles 2.8.3 copy_local: true
 
 // [ FAKE GROUP ]
 group Build
+  framework: netstandard20
   source https://api.nuget.org/v3/index.json
 
   nuget Newtonsoft.Json 12.0.2
