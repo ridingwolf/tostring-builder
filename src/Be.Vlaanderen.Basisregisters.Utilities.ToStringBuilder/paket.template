@@ -15,8 +15,8 @@ licenseUrl https://opensource.org/licenses/MIT
 description Easily customize ToString of objects by concatting given properties of the object into a string.
 
 dependencies
-  framework: netstandard20
+  framework: netcoreapp30
 
 files
-  bin\Release\netstandard2.0\Be.Vlaanderen.Basisregisters.Utilities.ToStringBuilder.dll => lib\netstandard2.0
-  bin\Release\netstandard2.0\Be.Vlaanderen.Basisregisters.Utilities.ToStringBuilder.pdb => lib\netstandard2.0
+  bin\Release\netcoreapp3.0\Be.Vlaanderen.Basisregisters.Utilities.ToStringBuilder.dll => lib\netcoreapp3.0
+  bin\Release\netcoreapp3.0\Be.Vlaanderen.Basisregisters.Utilities.ToStringBuilder.pdb => lib\netcoreapp3.0
