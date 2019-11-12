@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/informatievlaanderen/tostring-builder/compare/v1.1.1...v2.0.0) (2019-11-12)
+
+
+### Code Refactoring
+
+* move to netcoreapp3.0 ([604d480](https://github.com/informatievlaanderen/tostring-builder/commit/604d480))
+
+
+### BREAKING CHANGES
+
+* Moved to .NET Core 3
+
 ## [1.1.1](https://github.com/informatievlaanderen/tostring-builder/compare/v1.1.0...v1.1.1) (2019-10-27)
 
 
