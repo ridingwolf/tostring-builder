@@ -7,28 +7,28 @@ namespace Be.Vlaanderen.Basisregisters.Utilities
     public static class ToStringBuilder
     {
         // T.ToString(t => ....)
-        public static string ToString<T>(
+        public static string? ToString<T>(
             this T x,
             Func<T, IEnumerable<object>> stringValuesFunc)
-            => x.ToString(stringValuesFunc, (Func<object, object, object>) null);
+            => x.ToString(stringValuesFunc, null);
 
-        public static string ToString<T>(
+        public static string? ToString<T>(
             this T x,
             Func<T, IEnumerable<object>> stringValuesFunc,
-            Func<object, object, object> valueConcatFunc)
+            Func<object, object, object>? valueConcatFunc)
             => ToString(stringValuesFunc(x), valueConcatFunc);
 
-        public static string ToString(
+        public static string? ToString(
             Func<IEnumerable<object>> stringValuesFunc)
-            => ToString(stringValuesFunc(), (Func<object, object, object>) null);
+            => ToString(stringValuesFunc(), (Func<object, object, object>?) null);
 
-        public static string ToString(
+        public static string? ToString(
             IEnumerable<object> stringValues)
-            => ToString(stringValues, (Func<object, object, object>) null);
+            => ToString(stringValues, (Func<object, object, object>?) null);
 
-        public static string ToString(
+        public static string? ToString(
             IEnumerable<object> stringValuesFunc,
-            Func<object, object, object> valueConcatFunc)
+            Func<object, object, object>? valueConcatFunc)
         {
             object StringAggregator(object l, object r)
             {
