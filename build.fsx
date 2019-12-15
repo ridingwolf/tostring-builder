@@ -2,9 +2,9 @@
 version 5.226.0
 framework: netstandard20
 source https://api.nuget.org/v3/index.json
-nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 3.0.0 //"
+nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 3.1.0 //"
 
-#load "build-generic.fsx"
+#load "packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/build-generic.fsx"
 
 open Fake.Core
 open Fake.Core.TargetOperators
