@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/informatievlaanderen/tostring-builder/compare/v2.1.1...v2.2.0) (2020-01-31)
+
+
+### Features
+
+* upgrade netcoreapp31 and dependencies ([30ccca7](https://github.com/informatievlaanderen/tostring-builder/commit/30ccca72965d1aa71fcc9a367b6710577b0e0025))
+
 ## [2.1.1](https://github.com/informatievlaanderen/tostring-builder/compare/v2.1.0...v2.1.1) (2019-12-15)
 
 # [2.1.0](https://github.com/informatievlaanderen/tostring-builder/compare/v2.0.0...v2.1.0) (2019-12-15)
