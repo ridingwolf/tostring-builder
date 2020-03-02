@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.0...v2.2.1) (2020-03-02)
+
+
+### Bug Fixes
+
+* bump netcore to 3.1.2 ([5657ac1](https://github.com/informatievlaanderen/tostring-builder/commit/5657ac119c5073b6c7a1fa07cf989bb3249775b9))
+
 # [2.2.0](https://github.com/informatievlaanderen/tostring-builder/compare/v2.1.1...v2.2.0) (2020-01-31)
 
 
