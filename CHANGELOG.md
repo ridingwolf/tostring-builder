@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.1...v2.2.2) (2020-04-28)
+
+
+### Bug Fixes
+
+* move to gh actions and 3.1.3 ([221ac8a](https://github.com/informatievlaanderen/tostring-builder/commit/221ac8a9ba41365aaa1023a3f9b88dc40540f14d))
+
 ## [2.2.1](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.0...v2.2.1) (2020-03-02)
 
 
