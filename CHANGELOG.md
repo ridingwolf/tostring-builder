@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.3...v2.2.4) (2020-04-28)
+
+
+### Bug Fixes
+
+* doesnt use jira ([4682eb5](https://github.com/informatievlaanderen/tostring-builder/commit/4682eb5ff6080f38fe8f636b1bfa7ca77c7053d8))
+
 ## [2.2.3](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.2...v2.2.3) (2020-04-28)
 
 
