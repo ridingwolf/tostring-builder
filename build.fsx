@@ -30,7 +30,7 @@ Target.create "Lib_Pack" (fun _ -> pack "Be.Vlaanderen.Basisregisters.Utilities.
 
 // --------------------------------------------------------------------------------
 
-Target.create "PublishLibrary" ignore
+Target.create "PublishAll" ignore
 Target.create "PackageAll" ignore
 
 // Publish ends up with artifacts in the build folder
@@ -40,10 +40,10 @@ Target.create "PackageAll" ignore
   ==> "Lib_Build"
   ==> "Lib_Test"
   ==> "Lib_Publish"
-  ==> "PublishLibrary"
+  ==> "PublishAll"
 
 // Package ends up with local NuGet packages
-"PublishLibrary"
+"PublishAll"
   ==> "Lib_Pack"
   ==> "PackageAll"
 
