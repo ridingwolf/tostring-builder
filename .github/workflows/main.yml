@@ -94,10 +94,14 @@ jobs:
         GIT_COMMITTER_EMAIL: informatie.vlaanderen@vlaanderen.be
 
     - name: Set Release Version
-      run: echo ::set-env name=RELEASE_VERSION::$(cat semver)
+      if: success()
+      run: |
+        [ ! -f semver ] && echo none > semver
+        echo ::set-env name=RELEASE_VERSION::$(cat semver)
       shell: bash
 
     - name: Publish to NuGet
+      if: env.RELEASE_VERSION != "none"
       shell: bash
       run: |
         node packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-nuget.js dist/$LIBNAME/$LIBNAME.$SEMVER.nupkg
@@ -108,6 +112,7 @@ jobs:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
 
     - name: Publish to Confluence
+      if: env.RELEASE_VERSION != "none"
       shell: bash
       run: ./packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-confluence.sh
       env:
@@ -116,6 +121,7 @@ jobs:
         CONFLUENCE_PASSWORD: ${{ secrets.CONFLUENCE_PASSWORD }}
 
     - name: Create Jira Release
+      if: env.RELEASE_VERSION != "none"
       shell: bash
       run: ./packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-jira.sh
       env:
