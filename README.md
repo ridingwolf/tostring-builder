@@ -1,4 +1,4 @@
-# Be.Vlaanderen.Basisregisters.Utilities.ToStringBuilder
+# Be.Vlaanderen.Basisregisters.Utilities.ToStringBuilder [![Build Status](https://github.com/Informatievlaanderen/tostring-builder/workflows/CI/badge.svg)](https://github.com/Informatievlaanderen/tostring-builder/actions)
 
 Concat given properties of the object into a string
 
