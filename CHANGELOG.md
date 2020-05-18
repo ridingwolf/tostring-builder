@@ -1,3 +1,10 @@
+## [2.2.7](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.6...v2.2.7) (2020-05-18)
+
+
+### Bug Fixes
+
+* publish to confluence ([2557cf9](https://github.com/informatievlaanderen/tostring-builder/commit/2557cf90f8f45b5d2c5ef6c94e3ea3195f1901eb))
+
 ## [2.2.6](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.5...v2.2.6) (2020-05-18)
 
 
