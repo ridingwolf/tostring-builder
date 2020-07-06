@@ -93,7 +93,7 @@ $ dotnet run
 
 ### As an extension method
 
-This is also an extension method on `T`. Additionally, in all forms you can pass in the method used to concatenate the string.
+There is also an extension method on `T`. Additionally, in all forms you can pass in the method used to concatenate the string.
 
 ```csharp
 namespace Example
