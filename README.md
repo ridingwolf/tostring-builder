@@ -13,35 +13,82 @@ The most basic form of this library is to simply call it passing in the strings 
 By default it will concatenate them with a `, ` &nbsp;between them.
 
 ```csharp
-public class Test
+namespace Example
 {
-    public int Number { get; set; }
-    public bool IsTrue { get; set; }
+    using System;
+    using Be.Vlaanderen.Basisregisters.Utilities;
 
-    public override string ToString()
-        => ToStringBuilder.ToString(new object[] { Number, IsTrue });
+    public class Test
+    {
+        public int Number { get; set; }
+        public bool IsTrue { get; set; }
+
+        public override string ToString()
+            => ToStringBuilder.ToString(new object[] { Number, IsTrue });
+    }
+
+    public class Program
+    {
+        public static void Main(string[] _)
+        {
+            var test = new Test { Number = 42, IsTrue = false };
+            Console.WriteLine(test);
+        }
+    }
 }
+```
+
+The result when running this:
+
+```bash
+$ dotnet run
+42, False
 ```
 
 ### Using yield return
 
 You can also use this to pass in an `IEnumerable` which allows you to use `yield return` to supply the values for the concatenation.
 
+This allows you to stream values using [yield](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/yield).
+
 ```csharp
-public class Test
+namespace Example
 {
-    public int Number { get; set; }
-    public bool IsTrue { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using Be.Vlaanderen.Basisregisters.Utilities;
 
-    public override string ToString()
-        => ToStringBuilder.ToString(Fields);
-
-    public IEnumerable<object> Fields()
+    public class Test
     {
-        yield return Number;
-        yield return IsTrue;
+        public int Number { get; set; }
+        public bool IsTrue { get; set; }
+
+        public override string ToString()
+            => ToStringBuilder.ToString(Fields);
+
+        private IEnumerable<object> Fields()
+        {
+            yield return Number;
+            yield return IsTrue;
+        }
+    }
+
+    public class Program
+    {
+        public static void Main(string[] _)
+        {
+            var test = new Test { Number = 42, IsTrue = true };
+            Console.WriteLine(test);
+        }
     }
 }
+```
+
+The result when running this:
+
+```bash
+$ dotnet run
+42, True
 ```
 
 ### As an extension method
@@ -49,21 +96,47 @@ public class Test
 This is also an extension method on `T`. Additionally, in all forms you can pass in the method used to concatenate the string.
 
 ```csharp
-public class Test
+namespace Example
 {
-    public int Number { get; set; }
-    public bool IsTrue { get; set; }
-}
+    using System;
+    using Be.Vlaanderen.Basisregisters.Utilities;
 
-public class Example
-{
-    public void Example(Test test)
+    public class Test
     {
-        var s = test.ToString(
-            x => new object[] { x.Number, x.IsTrue },
-            (s1, s2) => $"{s1}/{s2}")
+        public int Number { get; set; }
+        public bool IsTrue { get; set; }
+    }
+
+    public class Dummy
+    {
+        public void Example(Test test)
+        {
+            var s = test.ToString(
+                x => new object[] {x.Number, x.IsTrue},
+                (s1, s2) => $"{s1}/{s2}");
+
+            Console.WriteLine(s);
+        }
+    }
+
+    public class Program
+    {
+        public static void Main(string[] _)
+        {
+            var test = new Test { Number = 42, IsTrue = true };
+            var dummy = new Dummy();
+
+            dummy.Example(test);
+        }
     }
 }
+```
+
+The result when running this:
+
+```bash
+$ dotnet run
+42/True
 ```
 
 ## License
