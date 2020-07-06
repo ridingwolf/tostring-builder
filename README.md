@@ -10,7 +10,7 @@ Easily concatenate properties of an object into a string.
 
 The most basic form of this library is to simply call it passing in the strings to concatenate.
 
-By default it will concatenate them with a `, ` between them.
+By default it will concatenate them with a `, ` &nbsp;between them.
 
 ```csharp
 public class Test
