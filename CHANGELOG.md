@@ -1,3 +1,10 @@
+## [2.2.9](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.8...v2.2.9) (2020-07-17)
+
+
+### Bug Fixes
+
+* move to 3.1.6 ([55434b6](https://github.com/informatievlaanderen/tostring-builder/commit/55434b64ed64cea601042912f921d3723d71ff38))
+
 ## [2.2.8](https://github.com/informatievlaanderen/tostring-builder/compare/v2.2.7...v2.2.8) (2020-06-18)
 
 
